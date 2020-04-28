@@ -26,6 +26,10 @@ public class Produto {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
+	
+	public static boolean predicadoProdutoStatico(Produto p ) {
+		return p.getPreco()>=100.00;
+	}
 
 	@Override
 	public String toString() {

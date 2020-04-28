@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Produto;
-import util.PredicadoProduto;
 
 public class Programa {
 
@@ -15,7 +14,7 @@ public class Programa {
 		list.add(new Produto("Tablet",350.50));
 		list.add(new Produto("HD case", 80.90));
 		
-		list.removeIf(new PredicadoProduto());
+		list.removeIf(Produto::predicadoProdutoStatico);
 		
 		for(Produto p : list) {
 			System.out.println(p);
