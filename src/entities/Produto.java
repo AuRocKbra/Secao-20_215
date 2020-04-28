@@ -27,8 +27,12 @@ public class Produto {
 		this.preco = preco;
 	}
 	
-	public static boolean predicadoProdutoStatico(Produto p ) {
+	public static boolean predicadoProdutoStatico(Produto p ) {//usa o produto passado por parametro
 		return p.getPreco()>=100.00;
+	}
+	
+	public boolean predicadoProdutoNaoStatico() {//usa o produto definido na propria classe
+		return preco>=100.00;
 	}
 
 	@Override

@@ -14,7 +14,7 @@ public class Programa {
 		list.add(new Produto("Tablet",350.50));
 		list.add(new Produto("HD case", 80.90));
 		
-		list.removeIf(Produto::predicadoProdutoStatico);
+		list.removeIf(Produto::predicadoProdutoNaoStatico);
 		
 		for(Produto p : list) {
 			System.out.println(p);
