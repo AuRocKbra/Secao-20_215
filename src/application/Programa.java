@@ -2,6 +2,7 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import entities.Produto;
 
@@ -14,7 +15,9 @@ public class Programa {
 		list.add(new Produto("Tablet",350.50));
 		list.add(new Produto("HD case", 80.90));
 		
-		list.removeIf(Produto::predicadoProdutoNaoStatico);
+		Predicate<Produto> pred = p -> p.getPreco() >= 100.00;//Declaração de função lambda
+		
+		list.removeIf(pred);
 		
 		for(Produto p : list) {
 			System.out.println(p);
